@@ -1,0 +1,128 @@
+.App {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+.Random{
+  margin-top: 20px;
+}
+.App-body{
+  background-color: white;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color:#282c34;
+}
+
+.card{
+ width:400px; 
+ height:auto;
+ border-left:4px solid goldenrod;
+ margin-bottom: 120px;
+ padding-left: 70px;
+ text-align: left;
+}
+.author{
+ width:500px; 
+ text-align: left;
+ margin-bottom: 80px;
+ margin-left: 173px;
+ display: flex;
+ justify-content: flex-start;
+
+}
+.authorCard{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  width:500px; 
+  margin-left: 50px;
+  height:100px;
+  text-align: left;
+  font-size: 20px;
+  padding-left: 20px;
+}
+.pg{
+font-size: 8px;
+color:grey
+}
+.attrs{
+display:flex;
+flex-direction: row;
+}
+#arr{
+margin-right: 20px;
+}
+.ran{
+  display: flex;
+  flex-direction: row;
+}
+#icon{
+font-size: 20px;
+}
+#loop{
+margin-left: 87%;
+display:flex;
+flex-direction: row;
+}
+.developer{
+position: relative;
+bottom: 0;
+font-size: 12px;
+
+}
+.dash {
+  display: flex;
+  color: black;
+  margin-left: 50px;
+}
+
+.dash .item {
+  
+  color: black;
+  width: 420px;
+  height:80px;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  justify-content: space-between;
+  padding-top: 10px;
+  
+ }
+.dash :hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+  
+}
+
+.top {
+  padding-top: 10px;
+  font-size: 20px;
+  padding: 10px 0px 10px 9px;
+  
+}
+.arrow {
+
+  padding-right: 10px;
+  padding-top: 20px;
+}
+.small {
+  float: left;
+  font-size: 12px;
+  padding-left: 10px;
+
+}
+.layout {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
