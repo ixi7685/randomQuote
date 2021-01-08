@@ -12,7 +12,7 @@ function App() {
       fetch('https://quote-garden.herokuapp.com/api/v3/quotes', { method: 'GET' })
       .then(data => data.json()) // Parsing the data into a JavaScript object
       .then(json =>  setQuotesList(json.data)/*setA(json)*/ ) // Displaying the stringified data in an alert popup
-      setDeveloper('ivanhadzi-cenic@devchalendges.io')
+      setDeveloper('ivanhadzi-cenic@DevChallenges.io')
     },[])
 
     function getRandom(){
@@ -70,7 +70,7 @@ function App() {
                   <div  key={item.quoteAuthor} >
                       <div  onClick={() =>callApi(item.quoteAuthor)} className="card"> {item.quoteText} </div>  
                   </div>)
-              })}
+               })}
       </header>
         <div>
         {developer &&   <div className="developer">  {developer}  </div>  }
