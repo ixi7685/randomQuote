@@ -8,14 +8,12 @@ function App() {
   const [author, setAuthor] = useState([]);
   const [developer, setDeveloper] = useState([]);
 
-
-useEffect(()=>{
-    
-    fetch('https://quote-garden.herokuapp.com/api/v3/quotes', { method: 'GET' })
-    .then(data => data.json()) // Parsing the data into a JavaScript object
-    .then(json =>  setQuotesList(json.data)/*setA(json)*/ ) // Displaying the stringified data in an alert popup
-     setDeveloper('ivanhadzi-cenic@devchalendges.io')
-},[])
+    useEffect(()=>{
+      fetch('https://quote-garden.herokuapp.com/api/v3/quotes', { method: 'GET' })
+      .then(data => data.json()) // Parsing the data into a JavaScript object
+      .then(json =>  setQuotesList(json.data)/*setA(json)*/ ) // Displaying the stringified data in an alert popup
+      setDeveloper('ivanhadzi-cenic@devchalendges.io')
+    },[])
 
     function getRandom(){
       setQuotes(null)
@@ -27,23 +25,22 @@ useEffect(()=>{
       setAuthor(randomQuote.quoteAuthor)
      }
 
-      useEffect(()=>{
+     useEffect(()=>{
       if(quotesList[0]){
       getRandom()
       }
      },[quotesList])
 
-      function callApi(r){
+     function callApi(rand){
       setRandomQuote(null);
-      setQuotes(quotesList.filter(d=> d.quoteAuthor === r))
+      setQuotes(quotesList.filter(quote=> quote.quoteAuthor === rand))
      }
      
-  return (
+    return (
     <div className="App">
       <div  onClick={getRandom}  className='Random' >
         <div id="loop">
         <div><span style={{fontSize:"16px"}}>random</span> </div>
-       
         <div> <span  id="icon"  className="material-icons" >loop</span></div>
         </div>
       </div>
@@ -67,8 +64,6 @@ useEffect(()=>{
                 </div>
               </div>
               }
-
-
               {quotes && <div className="author">{author}</div>  }
               {quotes && quotes.map((item)=>{
                 return ( 
@@ -76,13 +71,12 @@ useEffect(()=>{
                       <div  onClick={() =>callApi(item.quoteAuthor)} className="card"> {item.quoteText} </div>  
                   </div>)
               })}
-     
       </header>
         <div>
         {developer &&   <div className="developer">  {developer}  </div>  }
         </div>
     </div>
-  )
+    )
  
 }  
 
