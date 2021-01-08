@@ -57,7 +57,7 @@ useEffect(()=>{
                         {randomQuote.quoteAuthor}
                       </div>
                       <div className="bottom">
-                        <span className="small" style={{color: "grey "}}>business</span>
+                        <span className="small" style={{color: "grey "}}>{randomQuote.quoteGenre}</span>
                       </div>
                       </div>
                       <div className="arrow" style={{color: "white"}}>
